@@ -1,0 +1,8 @@
+services:
+  abac-demo:
+    build: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./data:/app/data
+    command: ["python", "app.py", "--audit-db", "data/audit.db"]
